@@ -1,0 +1,98 @@
+{
+  "hero": {
+    "eyebrow": "Engineering & Business",
+    "name": ["Charlie", "Erker"],
+    "bullets": [
+      "Building at the intersection of technology and strategy",
+      "Focused on products that create meaningful leverage",
+      "Currently based in the United States"
+    ],
+    "cta": {
+      "text": "View Resume",
+      "file": "resume.pdf"
+    }
+  },
+
+  "recents": [
+    {
+      "label": "Recent",
+      "title": "What I've Been Up To",
+      "items": [
+        {
+          "title": "New Role",
+          "description": "Started a new chapter — more soon."
+        },
+        {
+          "title": "Side Project",
+          "description": "Building something in the background. Details coming."
+        }
+      ]
+    }
+  ],
+
+  "about": {
+    "bio": [
+      "I'm Charlie Erker — an engineer and builder with a business mind. I care about understanding systems at a deep level and using that understanding to build things that matter.",
+      "My work sits at the overlap of <strong>technical depth</strong> and <strong>strategic clarity</strong> — whether that's shipping product, navigating organizations, or thinking through hard problems from first principles.",
+      "Outside of work I'm drawn to questions about how things scale, why some ideas compound and others don't, and what it actually takes to build something lasting."
+    ],
+    "details": [
+      { "label": "Location", "value": "United States" },
+      { "label": "Focus", "value": "Engineering & Strategy" },
+      { "label": "Open to", "value": "Interesting conversations" },
+      { "label": "Contact", "value": "erkercharlie@gmail.com" }
+    ]
+  },
+
+  "experience": [
+    {
+      "tag": "Engineering",
+      "title": "Software Engineer",
+      "org": "Company · Year – Present",
+      "description": "Update this with your current role. What you built, what moved the needle, what you learned.",
+      "image": ""
+    },
+    {
+      "tag": "Product",
+      "title": "Product Role",
+      "org": "Company · Year – Year",
+      "description": "Update this with a past role. Focus on outcomes and impact over responsibilities.",
+      "image": ""
+    },
+    {
+      "tag": "Early Work",
+      "title": "Earlier Experience",
+      "org": "Company · Year – Year",
+      "description": "Where it started. The foundations that shaped how you think about building.",
+      "image": ""
+    }
+  ],
+
+  "press": [
+    {
+      "source": "Publication",
+      "headline": "Update this with a real press item — a feature, interview, or mention worth highlighting.",
+      "url": "#"
+    },
+    {
+      "source": "Publication",
+      "headline": "A second press item. Replace with actual coverage once you have the links.",
+      "url": "#"
+    }
+  ],
+
+  "contact": {
+    "heading": "Let's Talk",
+    "body": "I'm always open to interesting conversations — whether it's about a project, an idea, or something you're building. Reach out directly.",
+    "email": "erkercharlie@gmail.com",
+    "links": [
+      { "label": "GitHub", "url": "https://github.com/erkercharlie" },
+      { "label": "LinkedIn", "url": "https://linkedin.com/in/charlie-erker" }
+    ]
+  },
+
+  "footer": {
+    "name": "Charlie Erker",
+    "note": "Built from scratch. Updated by editing data.json."
+  }
+}
