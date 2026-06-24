@@ -1,11 +1,13 @@
 {
   "hero": {
-    "eyebrow": "Engineering & Business",
+    "photo": "images/headshot.jpg",
+    "eyebrow": "Engineering & Business · University of Kansas",
     "name": ["Charlie", "Erker"],
     "bullets": [
-      "Building at the intersection of technology and strategy",
-      "Focused on products that create meaningful leverage",
-      "Currently based in the United States"
+      "Honors Mechanical Engineering student, GPA 3.88 — KU Class of 2028",
+      "Currently at Siemens Digital Industries Software, AD&T division",
+      "Co-founded KU's first consulting prep program; 1st place case competitor",
+      "Built and sold a patent-pending product from scratch as a founder"
     ],
     "cta": {
       "text": "View Resume",
@@ -19,80 +21,111 @@
       "title": "What I've Been Up To",
       "items": [
         {
-          "title": "New Role",
-          "description": "Started a new chapter — more soon."
+          "title": "Siemens Digital Industries Software",
+          "description": "Business Operations & Commercial Enablement Intern on the AD&T team — working under the VP of Strategy Execution & Operations in Charlotte, NC."
         },
         {
-          "title": "Side Project",
-          "description": "Building something in the background. Details coming."
+          "title": "KU Consulting Scholars Program",
+          "description": "Co-founded KU's first structured consulting prep program in June 2026 — built the curriculum, recruited the founding cohort, and locked in practitioner partnerships."
+        },
+        {
+          "title": "Case Competition Wins",
+          "description": "1st place at Best in the Midwest National Case Competition and UMSL International Business Case Competition. 3rd at Wisconsin Invitational (co-sponsored by McKinsey, Accenture & Deloitte)."
         }
       ]
     }
   ],
 
   "about": {
+    "stats": [
+      { "value": "3.88", "label": "GPA · KU Honors Program" },
+      { "value": "4×",   "label": "Case Competition\nFirst Place" },
+      { "value": "3",    "label": "Internships · Enterprise\nto Startup" }
+    ],
     "bio": [
-      "I'm Charlie Erker — an engineer and builder with a business mind. I care about understanding systems at a deep level and using that understanding to build things that matter.",
-      "My work sits at the overlap of <strong>technical depth</strong> and <strong>strategic clarity</strong> — whether that's shipping product, navigating organizations, or thinking through hard problems from first principles.",
-      "Outside of work I'm drawn to questions about how things scale, why some ideas compound and others don't, and what it actually takes to build something lasting."
+      "I'm a Mechanical Engineering student at the University of Kansas with a minor in Business, originally from St. Louis. I care about understanding systems deeply and using that understanding to build things that actually work.",
+      "My work cuts across <strong>operations, strategy, and product development</strong>. I've rebuilt client handoff processes at a Fortune 500, co-founded a student consulting program from scratch, and taken a patent-pending hardware product from a garage prototype to market. The common thread is figuring out what's broken, then fixing it.",
+      "Outside the day job I compete nationally in case competitions, lead community engineering projects through the SELF Engineering Leadership Fellows, and look for problems worth solving. I'm drawn to work that requires both engineering rigor and business judgment — the kind where neither background alone is enough."
     ],
     "details": [
-      { "label": "Location", "value": "United States" },
-      { "label": "Focus", "value": "Engineering & Strategy" },
-      { "label": "Open to", "value": "Interesting conversations" },
+      { "label": "Location", "value": "St. Louis, MO" },
+      { "label": "Degree", "value": "B.S. Mechanical Engineering, KU" },
+      { "label": "GPA", "value": "3.88 / 4.0 · Honors Program" },
+      { "label": "Open to", "value": "Internships & full-time roles" },
       { "label": "Contact", "value": "erkercharlie@gmail.com" }
     ]
   },
 
   "experience": [
     {
-      "tag": "Engineering",
-      "title": "Software Engineer",
-      "org": "Company · Year – Present",
-      "description": "Update this with your current role. What you built, what moved the needle, what you learned.",
-      "image": ""
+      "tag": "Operations & Strategy",
+      "title": "Business Operations Intern",
+      "org": "Siemens Digital Industries Software · May 2026 – Present",
+      "description": "Working directly under the VP of Strategy Execution & Operations on the Aerospace, Defense & Transportation team. Rebuilt the client handoff process after identifying gaps between sales and delivery; the framework is now used across the team. Built client-facing materials that help the sales team tell a clearer story to aerospace and defense buyers.",
+      "image": "images/siemens.jpg"
     },
     {
-      "tag": "Product",
-      "title": "Product Role",
-      "org": "Company · Year – Year",
-      "description": "Update this with a past role. Focus on outcomes and impact over responsibilities.",
-      "image": ""
+      "tag": "Leadership",
+      "title": "Co-Founder",
+      "org": "KU Consulting Scholars Program · Jun 2026 – Present",
+      "description": "Co-founded KU's first structured consulting prep program — built the curriculum, recruited the founding cohort, and established partnerships with practitioners. Simultaneously serves as VP of Consulting Relations for the Case Competition Club, managing firm relationships and co-running the Best in the Midwest National Case Competition.",
+      "image": "images/consulting.jpg"
+    },
+    {
+      "tag": "Construction & Engineering",
+      "title": "Corporate Intern",
+      "org": "CIC Group · Jun – Jul 2025",
+      "description": "Rotated across Nooter Construction, Nooter Eriksen Engineers, and Wyatt over six weeks. Worked in field engineering, preconstruction estimating, and construction management — including time in Chicago and Philadelphia offices and on active job sites with rigging engineers and drafters.",
+      "image": "images/cic.jpg"
     },
     {
       "tag": "Early Work",
-      "title": "Earlier Experience",
-      "org": "Company · Year – Year",
-      "description": "Where it started. The foundations that shaped how you think about building.",
-      "image": ""
+      "title": "Founder",
+      "org": "Buck-It · Jun 2022 – Nov 2023",
+      "description": "Founded Buck-It, a portable ventilation system for sports bags — from initial concept and garage fabrication through prototyping, cost control, and retail sales. Managed the full product lifecycle and brought it to market at live events.",
+      "image": "images/buckit.jpg"
     }
   ],
 
   "press": [
     {
-      "source": "Publication",
-      "headline": "Update this with a real press item — a feature, interview, or mention worth highlighting.",
-      "url": "#"
+      "source": "Kirkendall Ideation Challenge · 2025",
+      "headline": "1st Place — Led end-to-end development of Depth IA, an AI-integrated K-12 education platform, from ideation through prototyping and go-to-market strategy.",
+      "url": "#",
+      "image": "images/kirkendall.jpg"
     },
     {
-      "source": "Publication",
-      "headline": "A second press item. Replace with actual coverage once you have the links.",
-      "url": "#"
+      "source": "Best in the Midwest National Case Competition",
+      "headline": "1st Place — KU's invitational national case competition, planned, hosted, and funded by the Case Competition Club.",
+      "url": "#",
+      "image": "images/bitm.jpg"
+    },
+    {
+      "source": "UMSL International Business Case Competition",
+      "headline": "1st Place — Competed and won as part of KU's national case competition team.",
+      "url": "#",
+      "image": "images/umsl.jpg"
+    },
+    {
+      "source": "Wisconsin Invitational Consulting · McKinsey / Accenture / Deloitte",
+      "headline": "3rd Place — Competed against top university teams at the Wisconsin Invitational, co-sponsored by McKinsey, Accenture & Deloitte.",
+      "url": "#",
+      "image": "images/wisconsin.jpg"
     }
   ],
 
   "contact": {
     "heading": "Let's Talk",
-    "body": "I'm always open to interesting conversations — whether it's about a project, an idea, or something you're building. Reach out directly.",
+    "body": "I'm always open to interesting conversations — whether it's about an internship, a full-time role, or something you're building. Reach out directly.",
     "email": "erkercharlie@gmail.com",
     "links": [
-      { "label": "GitHub", "url": "https://github.com/erkercharlie" },
-      { "label": "LinkedIn", "url": "https://linkedin.com/in/charlie-erker" }
+      { "label": "LinkedIn", "url": "https://www.linkedin.com/in/charlie-erker" },
+      { "label": "GitHub", "url": "https://github.com/erkercharlie" }
     ]
   },
 
   "footer": {
     "name": "Charlie Erker",
-    "note": "Built from scratch. Updated by editing data.json."
+    "note": "Engineering & Business · University of Kansas · Class of 2028"
   }
 }
