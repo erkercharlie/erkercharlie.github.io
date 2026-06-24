@@ -51,7 +51,8 @@
       { "label": "Location", "value": "St. Louis, MO" },
       { "label": "Degree", "value": "B.S. Mechanical Engineering, KU" },
       { "label": "GPA", "value": "3.88 / 4.0 · Honors Program" },
-      { "label": "Open to", "value": "Internships & full-time roles" },
+      { "label": "Open to", "value": "Internship · Summer 2027" },
+      { "label": "Field", "value": "Management Consulting" },
       { "label": "Contact", "value": "erkercharlie@gmail.com" }
     ]
   },
