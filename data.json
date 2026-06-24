@@ -39,13 +39,13 @@
   "about": {
     "stats": [
       { "value": "3.88", "label": "GPA · KU Honors Program" },
-      { "value": "4×",   "label": "Case Competition\nFirst Place" },
-      { "value": "3",    "label": "Internships · Enterprise\nto Startup" }
+      { "value": "3×",   "label": "Case Competition\nFirst Place" },
+      { "value": "3",    "label": "Internships" }
     ],
     "bio": [
-      "I'm a Mechanical Engineering student at the University of Kansas with a minor in Business, originally from St. Louis. I care about understanding systems deeply and using that understanding to build things that actually work.",
-      "My work cuts across <strong>operations, strategy, and product development</strong>. I've rebuilt client handoff processes at a Fortune 500, co-founded a student consulting program from scratch, and taken a patent-pending hardware product from a garage prototype to market. The common thread is figuring out what's broken, then fixing it.",
-      "Outside the day job I compete nationally in case competitions, lead community engineering projects through the SELF Engineering Leadership Fellows, and look for problems worth solving. I'm drawn to work that requires both engineering rigor and business judgment — the kind where neither background alone is enough."
+      "I'm Charlie — a Mechanical Engineering student at KU with a minor in Business, originally from St. Louis. I ended up in engineering because I like knowing how things actually work, and I ended up in business because I want to do something with that.",
+      "So far that's looked like <strong>rebuilding operations processes at Siemens, co-founding a consulting prep program from scratch, and winning national case competitions</strong>. I'm drawn to problems that sit at the intersection of analytical and strategic — where you need both sides of the brain to get it right.",
+      "Outside of work I play drums, run, and spend more time than I'd like to admit reading about marine biology and watching aquarium documentaries. I think the best people are curious about things that have nothing to do with their job."
     ],
     "details": [
       { "label": "Location", "value": "St. Louis, MO" },
@@ -53,6 +53,7 @@
       { "label": "GPA", "value": "3.88 / 4.0 · Honors Program" },
       { "label": "Open to", "value": "Internship · Summer 2027" },
       { "label": "Field", "value": "Management Consulting" },
+      { "label": "Interests", "value": "Drums · Running · Marine Biology" },
       { "label": "Contact", "value": "erkercharlie@gmail.com" }
     ]
   },
