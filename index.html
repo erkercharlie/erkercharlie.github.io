@@ -563,6 +563,55 @@ nav.hide { transform: translateY(-100%); }
   50%      { transform: translateX(6px); }
 }
 
+/* ─── PROJECTS ────────────────────────────────────────────── */
+.projects {
+  background: var(--cream-2);
+  padding: 9rem 3rem;
+}
+.projects-inner { max-width: 1140px; margin: 0 auto; }
+.projects .sec-title { color: var(--ink); }
+.projects .sec-title em { color: var(--ink-2); }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+.project-card {
+  border-left: 2px solid var(--gold);
+  padding-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  transition: padding-left .3s var(--ease);
+}
+.project-card:hover { padding-left: 2.25rem; }
+.project-tag {
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .65rem;
+}
+.project-title {
+  font-family: var(--serif);
+  font-size: 1.25rem;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: .35rem;
+}
+.project-org {
+  font-size: .72rem;
+  color: var(--ink-3);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+.project-desc {
+  font-size: .875rem;
+  color: var(--ink-2);
+  line-height: 1.75;
+}
+
 /* ─── RECOGNITION ─────────────────────────────────────────── */
 .recog {
   background: var(--cream);
@@ -779,6 +828,8 @@ footer {
   .exp { padding: 7rem 0 7rem 2rem; }
   .exp-card { width: clamp(270px, 68vw, 420px); }
 
+  .projects { padding: 7rem 2rem; }
+  .projects-grid { gap: 2rem; }
   .recog { padding: 7rem 2rem; }
 
   .contact { padding: 7rem 2rem; }
@@ -808,6 +859,8 @@ footer {
   .exp-card { width: clamp(260px, 83vw, 360px); }
   .exp-footer { display: none; }
 
+  .projects { padding: 5.5rem 1.25rem; }
+  .projects-grid { grid-template-columns: 1fr; gap: 2rem; }
   .recog { padding: 5.5rem 1.25rem; }
   .recog-grid { grid-template-columns: 1fr; }
   .recog-card { padding: 2rem 1.75rem; }
@@ -934,6 +987,15 @@ footer {
     <div class="exp-hint reveal">
       Drag to explore <span class="exp-hint-arr">→</span>
     </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="projects" id="projects">
+  <div class="projects-inner">
+    <div class="sec-label reveal">Projects & Leadership</div>
+    <h2 class="sec-title reveal">What I've<br><em>Built & Led</em></h2>
+    <div class="projects-grid" id="projects-grid"></div>
   </div>
 </section>
 
@@ -1078,6 +1140,7 @@ function render(d) {
   renderMarquee();
   renderAbout(d.about);
   renderExp(d.experience);
+  renderProjects(d.projects);
   renderRecog(d.press);
   renderContact(d.contact);
   renderFooter(d.footer);
@@ -1213,6 +1276,23 @@ function renderExp(exp) {
         <div class="exp-desc">${e.description}</div>
       </div>`;
     track.appendChild(card);
+  });
+}
+
+/* PROJECTS */
+function renderProjects(projects) {
+  if (!projects || !projects.length) return;
+  const grid = document.getElementById('projects-grid');
+  projects.forEach((p, i) => {
+    const card = document.createElement('div');
+    card.className = 'project-card reveal';
+    card.style.transitionDelay = (i * .1) + 's';
+    card.innerHTML = `
+      <div class="project-tag">${p.tag}</div>
+      <div class="project-title">${p.title}</div>
+      <div class="project-org">${p.org}</div>
+      <div class="project-desc">${p.description}</div>`;
+    grid.appendChild(card);
   });
 }
 

@@ -65,11 +65,11 @@
       "image": "images/siemens.jpg"
     },
     {
-      "tag": "Leadership",
-      "title": "Co-Founder",
-      "org": "KU Consulting Scholars Program · Jun 2026 – Present",
-      "description": "Co-founded KU's first structured consulting prep program — built the curriculum, recruited the founding cohort, and established partnerships with practitioners. Simultaneously serves as VP of Consulting Relations for the Case Competition Club, managing firm relationships and co-running the Best in the Midwest National Case Competition.",
-      "image": "images/consulting.jpg"
+      "tag": "Marketing",
+      "title": "Marketing Intern",
+      "org": "Champion Sportswear (EMBER) · Aug 2025 – May 2026",
+      "description": "Campus trend-scouting ambassador through Champion's EMBER program. Analyzed consumer behavior and product usage patterns among college-aged audiences and translated findings into product and marketing recommendations shared across design, marketing, and brand management teams.",
+      "image": "images/champion.jpg"
     },
     {
       "tag": "Construction & Engineering",
@@ -111,6 +111,27 @@
       "headline": "3rd Place — Competed against top university teams at the Wisconsin Invitational, co-sponsored by McKinsey, Accenture & Deloitte.",
       "url": "#",
       "image": "images/wisconsin.jpg"
+    }
+  ],
+
+  "projects": [
+    {
+      "tag": "Co-Founder",
+      "title": "KU Consulting Scholars Program",
+      "org": "University of Kansas · Jun 2026 – Present",
+      "description": "Co-founded KU's first structured consulting prep program. Built the curriculum, recruited the founding cohort, and established partnerships with practitioners across consulting and strategy."
+    },
+    {
+      "tag": "VP, Consulting Relations",
+      "title": "Case Competition Club",
+      "org": "University of Kansas · Oct 2024 – Present",
+      "description": "Manage firm relationships and facilitate KU's consulting network. Co-run the Best in the Midwest National Case Competition — an invitational planned, hosted, and funded by the club."
+    },
+    {
+      "tag": "Cohort Co-Lead",
+      "title": "SELF Engineering Leadership Fellows",
+      "org": "University of Kansas · Aug 2024 – Present",
+      "description": "Led four community service engineering projects with $1,500 budgets each — managed nonprofit outreach, project scoping, and team execution. Also run KU Engineering's annual high school design competition."
     }
   ],
 
