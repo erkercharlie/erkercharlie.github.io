@@ -241,6 +241,71 @@ nav.hide { transform: translateY(-100%); }
 .hero-name-inner.gold-italic { font-style: italic; color: var(--gold-l); }
 
 /* bottom bar */
+/* ─── HERO RECENT CARD ───────────────────────────────────────── */
+.hero-recent {
+  position: absolute;
+  bottom: 7rem; left: 3rem;
+  width: 240px;
+  background: rgba(13,27,42,.72);
+  border: 1px solid rgba(201,168,76,.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1.1rem 1.25rem;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity .65s var(--ease) 1.3s, transform .65s var(--ease) 1.3s;
+}
+.hero-recent.vis { opacity: 1; transform: translateY(0); }
+.hero-recent-label {
+  font-size: .52rem;
+  font-weight: 700;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: .65rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.hero-recent-label::before {
+  content: '';
+  display: inline-block;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: pulse-dot 2s ease infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: .4; transform: scale(.7); }
+}
+.hero-recent-title {
+  font-family: var(--serif);
+  font-size: .95rem;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: .35rem;
+}
+.hero-recent-desc {
+  font-size: .68rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.65;
+}
+.hero-recent-link {
+  display: inline-block;
+  margin-top: .7rem;
+  font-size: .58rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid rgba(201,168,76,.3);
+  padding-bottom: 1px;
+  transition: border-color .2s;
+}
+.hero-recent-link:hover { border-color: var(--gold); }
+
 .hero-bottom {
   position: relative; z-index: 1;
   display: flex;
@@ -928,6 +993,8 @@ footer {
 
   <div class="hero-name" id="hero-name"></div>
 
+  <div class="hero-recent" id="hero-recent"></div>
+
   <div class="hero-bottom">
     <div class="hero-left-info">
       <div class="hero-eyebrow" id="hero-eyebrow">
@@ -1120,8 +1187,19 @@ async function loadData() {
   render(d);
 }
 
+function renderHeroRecent(r) {
+  if (!r) return;
+  const el = document.getElementById('hero-recent');
+  el.innerHTML = `
+    <div class="hero-recent-label">Recent</div>
+    <div class="hero-recent-title">${r.title}</div>
+    <div class="hero-recent-desc">${r.description}</div>
+    ${r.link ? `<a class="hero-recent-link" href="${r.link}" target="_blank" rel="noopener">${r.linkLabel || 'Read more'} ↗</a>` : ''}`;
+}
+
 function render(d) {
   renderHero(d.hero, d.experience);
+  renderHeroRecent(d.heroRecent);
   renderMarquee();
   renderAbout(d.about);
   renderExp(d.experience);
@@ -1184,6 +1262,7 @@ function heroReveal() {
   // auxiliary
   setTimeout(() => document.getElementById('hero-corner').classList.add('vis'), 950);
   setTimeout(() => document.getElementById('hero-scroll').classList.add('vis'), 1150);
+  setTimeout(() => { const r = document.getElementById('hero-recent'); if (r) r.classList.add('vis'); }, 1400);
 
   // nav
   setTimeout(() => {
