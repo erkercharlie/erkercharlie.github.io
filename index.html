@@ -179,30 +179,44 @@ nav.hide { transform: translateY(-100%); }
   width: 100%;
   min-height: 100svh;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 0 3rem 3.5rem;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 56px;
+  padding: 5.5rem 3rem 3.5rem;
   position: relative;
 }
 
-/* top-right corner: headshot + status */
-.hero-corner {
-  position: absolute;
-  top: 5.5rem; right: 3rem;
-  text-align: right;
+/* LEFT COLUMN */
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   z-index: 1;
+}
+.hero-left-bottom { display: flex; flex-direction: column; gap: .6rem; }
+
+/* RIGHT RAIL */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  z-index: 1;
+}
+
+/* headshot + status — now in-flow in right rail */
+.hero-corner {
+  text-align: right;
   opacity: 0;
   transform: translateY(-8px);
   transition: opacity .65s var(--ease) 1.0s, transform .65s var(--ease) 1.0s;
+  width: 100%;
 }
 .hero-corner.vis { opacity: 1; transform: translateY(0); }
 .hero-photo {
-  width: 185px;
-  height: 250px;
+  width: 100%;
+  height: 260px;
   overflow: hidden;
   border: 1px solid rgba(201,168,76,.2);
-  margin-left: auto;
   margin-bottom: .9rem;
 }
 .hero-photo img {
@@ -232,7 +246,6 @@ nav.hide { transform: translateY(-100%); }
 /* name */
 .hero-name {
   position: relative; z-index: 1;
-  margin-bottom: 3.5rem;
 }
 .hero-name-line {
   display: block;
@@ -251,12 +264,10 @@ nav.hide { transform: translateY(-100%); }
 .hero-name-inner.vis { transform: translateY(0); }
 .hero-name-inner.gold-italic { font-style: italic; color: var(--gold-l); }
 
-/* bottom bar */
 /* ─── HERO RECENT CARD ───────────────────────────────────────── */
 .hero-recent {
-  position: absolute;
-  top: 27rem; right: 3rem;
-  width: 290px;
+  margin-top: auto;
+  width: 100%;
   background: #fdf8e1;
   padding: 1.35rem 1.25rem 1.25rem;
   z-index: 2;
@@ -325,13 +336,7 @@ nav.hide { transform: translateY(-100%); }
 }
 .hero-recent-link:hover { border-color: var(--gold); }
 
-.hero-bottom {
-  position: relative; z-index: 1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 2rem;
-}
+.hero-bottom { display: contents; }
 .hero-left-info { max-width: 460px; }
 .hero-eyebrow {
   font-size: .62rem;
@@ -360,13 +365,7 @@ nav.hide { transform: translateY(-100%); }
 }
 .hero-sub.vis { opacity: 1; transform: translateY(0); }
 
-.hero-scroll {
-  display: flex; flex-direction: column; align-items: center; gap: .55rem;
-  opacity: 0;
-  transition: opacity .5s var(--ease) 1.2s;
-  flex-shrink: 0;
-}
-.hero-scroll.vis { opacity: 1; }
+.hero-scroll { display: none; }
 .hero-scroll-label {
   font-size: .56rem;
   font-weight: 600;
@@ -890,8 +889,8 @@ footer {
   nav { padding: 1.3rem 2rem; }
   nav.scrolled { padding: .95rem 2rem; }
 
-  .hero-inner { padding: 0 2rem 3rem; }
-  .hero-corner { right: 2rem; }
+  .hero-inner { padding: 5rem 2rem 3rem; grid-template-columns: 1fr 260px; gap: 3rem; }
+  .hero-photo { height: 200px; }
 
   .about { padding: 7rem 2rem; }
   .about-body { grid-template-columns: 1fr; gap: 3.5rem; }
@@ -914,21 +913,12 @@ footer {
   nav.scrolled { padding: .8rem 1.25rem; }
   .nav-cta { padding: .4rem .85rem; font-size: .63rem; }
 
-  .hero-inner { padding: 0 1.25rem 2.25rem; }
-  .hero-corner { display: none; }
-  .hero-name-inner { font-size: clamp(4.2rem, 17vw, 7rem); }
-  .hero-bottom { flex-direction: column-reverse; align-items: flex-start; gap: 1.5rem; }
-  .hero-recent {
-    position: static;
-    transform: rotate(1.5deg) !important;
-    width: auto;
-    margin: 1.75rem 0 0;
-    align-self: flex-start;
-  }
-  .hero-recent.vis { transform: rotate(1.5deg) !important; }
-  .hero-scroll { flex-direction: row; gap: .75rem; }
-  .hero-scroll-label { writing-mode: horizontal-tb; transform: none; }
-  .hero-scroll-bar { width: 28px; height: 1px; animation: none; opacity: .5; }
+  .hero-inner { padding: 4.5rem 1.25rem 2.25rem; grid-template-columns: 1fr; gap: 2rem; }
+  .hero-name-inner { font-size: clamp(3.8rem, 15vw, 6.5rem); }
+  .hero-right { flex-direction: row; align-items: flex-start; gap: 1.25rem; flex-wrap: wrap; }
+  .hero-corner { width: auto; }
+  .hero-photo { width: 96px; height: 130px; margin-bottom: .5rem; }
+  .hero-recent { margin-top: 0; width: 100%; }
 
   .about { padding: 5.5rem 1.25rem; }
   .about-stats { gap: 1.5rem; }
@@ -1013,28 +1003,29 @@ footer {
 <!-- HERO -->
 <section class="hero" id="hero">
 <div class="hero-inner">
-  <div class="hero-corner" id="hero-corner">
-    <div class="hero-photo" id="hero-photo"></div>
-    <div class="hero-status-label">Currently at</div>
-    <div class="hero-status-value" id="hero-status-val"></div>
-  </div>
 
-  <div class="hero-name" id="hero-name"></div>
-
-  <div class="hero-bottom">
-    <div class="hero-left-info">
+  <!-- LEFT: name top, eyebrow+bio bottom -->
+  <div class="hero-left">
+    <div class="hero-name" id="hero-name"></div>
+    <div class="hero-left-bottom">
       <div class="hero-eyebrow" id="hero-eyebrow">
         <span class="eyebrow-line" id="eyebrow-line"></span>
         <span id="eyebrow-text"></span>
       </div>
       <p class="hero-sub" id="hero-sub"></p>
     </div>
-    <div class="hero-scroll" id="hero-scroll">
-      <span class="hero-scroll-label">Scroll</span>
-      <span class="hero-scroll-bar"></span>
-    </div>
   </div>
-  <div class="hero-recent" id="hero-recent"></div>
+
+  <!-- RIGHT RAIL: photo → currently at → post-it -->
+  <div class="hero-right">
+    <div class="hero-corner" id="hero-corner">
+      <div class="hero-photo" id="hero-photo"></div>
+      <div class="hero-status-label">Currently at</div>
+      <div class="hero-status-value" id="hero-status-val"></div>
+    </div>
+    <div class="hero-recent" id="hero-recent"></div>
+  </div>
+
 </div>
 </section>
 
