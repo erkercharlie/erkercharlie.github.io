@@ -1248,8 +1248,9 @@ function renderExp(exp) {
   exp.forEach((e, i) => {
     const card = document.createElement('div');
     card.className = 'exp-card';
+    const imgStyle = e.imagePosition ? ` style="object-position:${e.imagePosition}"` : '';
     const imgHTML = e.image
-      ? `<div class="exp-card-img"><img src="${e.image}" alt="${e.title}" loading="lazy"></div>`
+      ? `<div class="exp-card-img"><img src="${e.image}" alt="${e.title}" loading="lazy"${imgStyle}></div>`
       : '';
     card.innerHTML = `
       ${imgHTML}

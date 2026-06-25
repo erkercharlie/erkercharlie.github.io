@@ -84,7 +84,8 @@
       "title": "Founder",
       "org": "Buck-It · Jun 2022 – Nov 2023",
       "description": "Founded Buck-It, a portable ventilation system for sports bags — from initial concept and garage fabrication through prototyping, cost control, and retail sales. Managed the full product lifecycle and brought it to market at live events.",
-      "image": "images/buckit.jpg"
+      "image": "images/buckit.jpg",
+      "imagePosition": "center 75%"
     }
   ],
 
